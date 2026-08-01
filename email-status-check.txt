@@ -1,0 +1,30 @@
+LEAKLING — STATUS CHECK EMAIL (Riot Dev Application)
+=====================================================
+Use this if your Riot developer application has been in review for ~4+ weeks
+with no response. Send via the Riot developer portal's contact channel, or to
+the address the application pointed you to. Replace [PLACEHOLDERS].
+
+Subject: Follow-up — Riot Developer Application Status
+
+
+Hi Riot Developer Support,
+
+I'm following up on my developer application for the Valorant developer
+program (submitted [DATE], domain verification completed on [DATE]).
+
+- Product: Leakling — an on-device AI improvement tool for Valorant
+  (not a stat tracker). It analyzes the player's own screen locally to
+  detect death causes and build improvement habits.
+- Verification: the ownership file (riot.txt) is live and publicly
+  accessible at https://leakling.info/riot.txt
+- Application reference / Riot ID: [APPLICATION_ID_OR_EMAIL]
+
+I wanted to check whether there's any additional information needed from
+my side to move the application forward. Happy to provide anything else
+(e.g. demo access, data-usage details, or a walkthrough).
+
+Thank you for your time.
+
+Best,
+[YOUR NAME]
+[CONTACT_EMAIL]
