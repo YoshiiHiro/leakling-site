@@ -1,6 +1,6 @@
 {
   "name": "leakling",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Leakling — tag why you died in Valorant and build a personal leak profile",
   "main": "main.js",
   "scripts": {
