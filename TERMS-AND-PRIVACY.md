@@ -56,7 +56,13 @@ Because all data is local, you can delete it at any time via the app's "Reset al
 
 - We may update these terms or the app at any time. Continued use after changes constitutes acceptance.
 - We may disable or restrict the app at any time for any reason.
+- **Features subject to change:** Features and additions described on the website or in the app are subject to change at any time before the app's official release. Nothing shown in the demo is a commitment to a final feature set or release date.
 
-### 3.6 Contact
+### 3.6 Bans & account issues
+
+- Leakling is designed not to interfere with the game or your account (it only reads the screen and never touches the game process). However, if you experience any ban, penalty, or other issue while using the demo, please contact us via the email in the **Contact** section of the website first.
+- While we will do our best to help, we **cannot guarantee a resolution**, and we are **not responsible** for any bans, penalties, account actions, or other mishaps that result from using the demo. You use the app at your own risk — it is a **demonstration prototype** (see the prototype notice in Section 1).
+
+### 3.7 Contact
 
 - For questions about these terms or privacy, contact us at the address listed on the Leakling website.
