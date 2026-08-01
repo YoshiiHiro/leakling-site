@@ -5,7 +5,7 @@ A Valorant death-reason overlay. Tag why you died and build a personal leak prof
 Built with **Electron + React + Vite + Tailwind CSS**. Desktop UI designed in Figma.
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Leakling-0.1.0-a78bfa?style=for-the-badge" alt="Leakling 0.1.0" />
+  <img src="https://img.shields.io/badge/Leakling-0.1.1-a78bfa?style=for-the-badge" alt="Leakling 0.1.1" />
   <img src="https://img.shields.io/badge/Valorant-AI%20Improvement%20Tool-7c3aed?style=for-the-badge" alt="Valorant AI Improvement Tool" />
   <img src="https://img.shields.io/badge/demo-ready-7fd962?style=for-the-badge" alt="Demo ready" />
 </div>
@@ -15,7 +15,7 @@ Built with **Electron + React + Vite + Tailwind CSS**. Desktop UI designed in Fi
 A ~10-minute review path — **no live Valorant match required**.
 
 1. **📦 Install & launch**
-   Run the desktop app (`npm start`) or the portable EXE / MSI installer. The desktop window opens automatically.
+   Download the **MSI installer** or **portable EXE** from the [Releases page](https://github.com/YoshiiHiro/leakling-site/releases) — **no Node.js needed**. Run it; the desktop window opens automatically.
 
 2. **🎭 Mock mode** — the full flow without a game
    - Open the **Mock** tab → toggle **Mock mode** on
@@ -35,7 +35,13 @@ A ~10-minute review path — **no live Valorant match required**.
 
 > **Note:** the AI flaw-classification model is a **prototype** — the detection pipeline works today, while flaw-classification quality keeps improving as development continues (pending Riot/Overwolf developer applications).
 
-## Quick start
+## ⬇️ End users — no Node.js needed
+
+If you're here to **try the demo**, you don't need Node.js or the source code. Just download the **MSI installer** or **portable EXE** from the [Releases page](https://github.com/YoshiiHiro/leakling-site/releases) and run it. The rest of this README's "Quick start" is only for developers building from source.
+
+## Developer quick start (build from source)
+
+> Requires **Node.js v18+** — only needed for this developer path, **not** for end users.
 
 ### 1. Install Node.js (if not already installed)
 
