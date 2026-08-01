@@ -11,5 +11,7 @@ Detection runs entirely on-device: window-based capture, structural kill-feed an
 
 Everything is privacy-first — no cloud, no recording, data never leaves the device. A full Mock mode demos the complete flow without a live match. Demo-ready: desktop app, website, and MSI installer available.
 
+**Disclaimer:** The AI flaw-classification model is currently a **prototype** — not yet fully trained or production-ready. Leakling is in active development while we await responses to our Riot Games and Overwolf developer applications. The detection pipeline and demo work today, but flaw-classification quality will keep improving as the model is developed further.
+
 *Leakling — not affiliated with Riot Games.*
 
