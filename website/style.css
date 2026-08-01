@@ -793,6 +793,14 @@ img {
   color: #9ca3af;
 }
 
+.footer-meta a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+.footer-meta a:hover {
+  text-decoration: underline;
+}
+
 /* ===== Mobile Nav ===== */
 @media (max-width: 768px) {
   .nav-links {
