@@ -4,6 +4,37 @@ A Valorant death-reason overlay. Tag why you died and build a personal leak prof
 
 Built with **Electron + React + Vite + Tailwind CSS**. Desktop UI designed in Figma.
 
+<div align="center">
+  <img src="https://img.shields.io/badge/Leakling-0.1.0-a78bfa?style=for-the-badge" alt="Leakling 0.1.0" />
+  <img src="https://img.shields.io/badge/Valorant-AI%20Improvement%20Tool-7c3aed?style=for-the-badge" alt="Valorant AI Improvement Tool" />
+  <img src="https://img.shields.io/badge/demo-ready-7fd962?style=for-the-badge" alt="Demo ready" />
+</div>
+
+## 🚀 Demo walkthrough (for reviewers)
+
+A ~10-minute review path — **no live Valorant match required**.
+
+1. **📦 Install & launch**
+   Run the desktop app (`npm start`) or the portable EXE / MSI installer. The desktop window opens automatically.
+
+2. **🎭 Mock mode** — the full flow without a game
+   - Open the **Mock** tab → toggle **Mock mode** on
+   - **Simulate death** → the in-game overlay appears → pick a cause
+   - Watch tags fill **Cause breakdown** and **Recent tags**
+   - **End mock match** → see the summary + next-match focus
+
+3. **🧠 Flaw model demo** — see the AI classify a death
+   - In the **FLAW MODEL DEMO** panel: **Load model** → **Capture reference**
+   - Optional: type the POV player's name in **Your name (OCR confirm)**
+   - **Watch round** while a clip plays (e.g. VLC) → on death it shows flaw type, confidence, and severity
+
+4. **🎯 Detection AI** — live kill-feed detection
+   - In the **DETECTION AI** panel: toggle **Snap** (or **Auto**)
+   - Watch the state chip + FPS; a confirmed death saves a tag and opens the overlay
+   - **Reset** clears detector history
+
+> **Note:** the AI flaw-classification model is a **prototype** — the detection pipeline works today, while flaw-classification quality keeps improving as development continues (pending Riot/Overwolf developer applications).
+
 ## Quick start
 
 ### 1. Install Node.js (if not already installed)
