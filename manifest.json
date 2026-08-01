@@ -1,0 +1,79 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "Leakling",
+    "author": "Pinnacle",
+    "version": "0.1.0",
+    "minimum-overwolf-version": "0.204.0",
+    "minimum-gep-version": "0.204.0",
+    "description": "Leakling — tag why you died in Valorant and build a personal leak profile",
+    "icon": "icons/IconMouseOver.png",
+    "icon_gray": "icons/IconMouseNormal.png",
+    "launcher_icon": "icons/desktop-icon.ico",
+    "window_icon": "icons/window-icon.png"
+  },
+  "permissions": ["Hotkeys", "GameInfo", "Extensions"],
+  "data": {
+    "start_window": "background",
+    "hotkeys": {
+      "autopsy_showhide": {
+        "title": "Show/Hide Death Tag Overlay",
+        "action-type": "custom",
+        "default": "Ctrl+Shift+A"
+      },
+      "autopsy_mock_death": {
+        "title": "Simulate Death (Mock Mode)",
+        "action-type": "custom",
+        "default": "Ctrl+Shift+D"
+      }
+    },
+    "windows": {
+      "background": {
+        "file": "windows/background/background.html",
+        "is_background_page": true,
+        "background_optimization": true
+      },
+      "desktop": {
+        "file": "windows/desktop/desktop.html",
+        "desktop_only": true,
+        "native_window": true,
+        "resizable": true,
+        "transparent": false,
+        "size": { "width": 900, "height": 620 },
+        "min_size": { "width": 720, "height": 480 }
+      },
+      "in_game": {
+        "file": "windows/in-game/in-game.html",
+        "in_game_only": false,
+        "focus_game_takeover": "ReleaseOnHidden",
+        "focus_game_takeover_release_hotkey": "autopsy_showhide",
+        "resizable": false,
+        "transparent": true,
+        "clickthrough": false,
+        "size": { "width": 440, "height": 360 },
+        "start_position": { "top": 120, "left": 40 }
+      }
+    },
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [21640]
+    },
+    "game_events": [21640],
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "event_data": {
+          "game_ids": [21640],
+          "wait_for_stable_framerate": 30
+        },
+        "start_minimized": true
+      }
+    ],
+    "developer": {
+      "enable_auto_refresh": true,
+      "reload_delay": 1000,
+      "filter": "*.*"
+    }
+  }
+}

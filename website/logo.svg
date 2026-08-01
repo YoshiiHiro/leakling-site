@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#c8a2ff"/>
+
+  <!-- TV Body -->
+  <rect x="116" y="140" width="280" height="200" rx="20" ry="20" fill="white"/>
+
+  <!-- TV Screen -->
+  <rect x="136" y="158" width="240" height="140" rx="10" ry="10" fill="#c8a2ff"/>
+
+  <!-- Eyes on screen -->
+  <circle cx="206" cy="228" r="24" fill="white"/>
+  <circle cx="306" cy="228" r="24" fill="white"/>
+  <!-- Pupils -->
+  <circle cx="212" cy="222" r="10" fill="#c8a2ff"/>
+  <circle cx="312" cy="222" r="10" fill="#c8a2ff"/>
+
+  <!-- Mouth (smile) -->
+  <path d="M 216 262 Q 256 286 296 262" fill="none" stroke="white" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- TV Antenna -->
+  <line x1="256" y1="140" x2="256" y2="82" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="208" y1="98" x2="256" y2="82" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <line x1="304" y1="98" x2="256" y2="82" stroke="white" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Antenna tips (little circles) -->
+  <circle cx="208" cy="98" r="8" fill="white"/>
+  <circle cx="304" cy="98" r="8" fill="white"/>
+
+  <!-- Legs -->
+  <rect x="170" y="340" width="28" height="36" rx="6" fill="white"/>
+  <rect x="314" y="340" width="28" height="36" rx="6" fill="white"/>
+
+  <!-- TV knobs/buttons -->
+  <circle cx="196" cy="318" r="6" fill="white" opacity="0.6"/>
+  <circle cx="226" cy="318" r="6" fill="white" opacity="0.6"/>
+
+  <!-- Small TV bunny ears on top corners -->
+  <line x1="156" y1="140" x2="136" y2="96" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <line x1="356" y1="140" x2="376" y2="96" stroke="white" stroke-width="5" stroke-linecap="round"/>
+</svg>

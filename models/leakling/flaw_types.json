@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "categories": {
+    "crosshair_placement": {
+      "name": "Crosshair Placement",
+      "subtypes": [
+        "CP-01",
+        "CP-02",
+        "CP-03",
+        "CP-04",
+        "CP-05",
+        "CP-06"
+      ],
+      "description": "Crosshair position, pre-aiming, reaction timing"
+    },
+    "positioning": {
+      "name": "Positioning",
+      "subtypes": [
+        "PS-01",
+        "PS-02",
+        "PS-03",
+        "PS-04",
+        "PS-05",
+        "PS-06"
+      ],
+      "description": "Cover usage, peek width, off-angles, rotation"
+    },
+    "decision_making": {
+      "name": "Decision Making",
+      "subtypes": [
+        "DM-01",
+        "DM-02",
+        "DM-03",
+        "DM-04",
+        "DM-05",
+        "DM-06"
+      ],
+      "description": "Rotations, trading, economy, engagement choices"
+    },
+    "utility_usage": {
+      "name": "Utility Usage",
+      "subtypes": [
+        "UT-01",
+        "UT-02",
+        "UT-04",
+        "UT-06"
+      ],
+      "description": "Ability usage, smokes, flashes, ultimates"
+    },
+    "mechanics": {
+      "name": "Mechanics",
+      "subtypes": [
+        "MC-02",
+        "MC-03",
+        "MC-05"
+      ],
+      "description": "Counter-strafing, spray control, reload timing"
+    },
+    "game_sense": {
+      "name": "Game Sense",
+      "subtypes": [
+        "GS-01",
+        "GS-03",
+        "GS-04",
+        "GS-05"
+      ],
+      "description": "Corner checks, map awareness, audio usage"
+    },
+    "team_play": {
+      "name": "Team Play",
+      "subtypes": [
+        "TP-02",
+        "TP-05"
+      ],
+      "description": "Trading, saving, playing with the team"
+    }
+  },
+  "all_subtypes": [
+    "CP-01",
+    "CP-02",
+    "CP-03",
+    "CP-04",
+    "CP-05",
+    "CP-06",
+    "PS-01",
+    "PS-02",
+    "PS-03",
+    "PS-04",
+    "PS-05",
+    "PS-06",
+    "DM-01",
+    "DM-02",
+    "DM-03",
+    "DM-04",
+    "DM-05",
+    "DM-06",
+    "MC-02",
+    "MC-03",
+    "MC-05",
+    "GS-01",
+    "GS-03",
+    "GS-04",
+    "GS-05",
+    "TP-02",
+    "TP-05",
+    "UT-01",
+    "UT-02",
+    "UT-04",
+    "UT-06"
+  ],
+  "idx_to_flaw": {
+    "0": "CP-01",
+    "1": "CP-02",
+    "2": "CP-03",
+    "3": "CP-04",
+    "4": "CP-05",
+    "5": "CP-06",
+    "6": "PS-01",
+    "7": "PS-02",
+    "8": "PS-03",
+    "9": "PS-04",
+    "10": "PS-05",
+    "11": "PS-06",
+    "12": "DM-01",
+    "13": "DM-02",
+    "14": "DM-03",
+    "15": "DM-04",
+    "16": "DM-05",
+    "17": "DM-06",
+    "18": "MC-02",
+    "19": "MC-03",
+    "20": "MC-05",
+    "21": "GS-01",
+    "22": "GS-03",
+    "23": "GS-04",
+    "24": "GS-05",
+    "25": "TP-02",
+    "26": "TP-05",
+    "27": "UT-01",
+    "28": "UT-02",
+    "29": "UT-04",
+    "30": "UT-06"
+  },
+  "idx_to_name": {
+    "0": "Floor-aiming",
+    "1": "Bad pre-aim",
+    "2": "No pre-fire",
+    "3": "Target lock delay",
+    "4": "Over-flicking",
+    "5": "Body-level spray at range",
+    "6": "Standing in the open",
+    "7": "Wide-peeking with OP",
+    "8": "Exposed flank",
+    "9": "Crouch-spray habit",
+    "10": "Bad off-angle",
+    "11": "Over-rotating",
+    "12": "Wrong rotation",
+    "13": "Peeking with disadvantage",
+    "14": "Not trading",
+    "15": "Bad economy buy",
+    "16": "No spike plant",
+    "17": "Over-healing",
+    "18": "Spray too long",
+    "19": "No burst at range",
+    "20": "Slow weapon swap",
+    "21": "No info check",
+    "22": "Not using audio",
+    "23": "Tunnel vision",
+    "24": "Map blindness",
+    "25": "Lurking too long",
+    "26": "Ability withholding",
+    "27": "Wasted utility",
+    "28": "Self-blind",
+    "29": "Late utility",
+    "30": "Missing easy utility kill"
+  }
+}

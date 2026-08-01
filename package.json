@@ -1,0 +1,81 @@
+{
+  "name": "leakling",
+  "version": "0.1.0",
+  "description": "Leakling — tag why you died in Valorant and build a personal leak profile",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "dev:electron": "vite build && electron .",
+    "start": "vite build && electron .",
+    "build:vite": "vite build",
+    "build": "vite build && electron-builder --win portable",
+    "build:dir": "vite build && electron-builder --win dir",
+    "build:msi": "vite build && electron-builder --win msi"
+  },
+  "build": {
+    "appId": "com.leakling.app",
+    "productName": "Leakling",
+    "files": [
+      "main.js",
+      "preload.js",
+      "dist/**/*",
+      "windows/**/*",
+      "scripts/**/*",
+      "css/**/*",
+      "icons/**/*",
+      "models/leakling/model.onnx",
+      "models/leakling/model.onnx.data",
+      "models/leakling/flaw_types.json",
+      "models/leakling/manifest.json",
+      "manifest.json",
+      "package.json",
+      "!leakling.zip",
+      "!Popup Pill Design.zip",
+      "!Leakling-website-deploy.zip",
+      "!eng.traineddata",
+      "!models/leakling/model.pt",
+      "!Leakling_Pipeline_Handoff.md",
+      "!README.md",
+      "!email-template.html",
+      "!email-template.txt",
+      "!msi-build.log",
+      "!build/**/*",
+      "!dist/win-unpacked/**/*",
+      "!dist/*.msi",
+      "!dist/*.exe",
+      "!dist/*.log",
+      "!dist/builder-effective-config.yaml"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false,
+      "forceCodeSigning": false
+    }
+  },
+  "dependencies": {
+    "onnxruntime-node": "^1.27.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^4.7.0",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0",
+    "jimp": "^1.6.1",
+    "png-to-ico": "^3.0.2",
+    "tailwindcss": "^4.1.12",
+    "to-ico": "^1.1.5",
+    "typescript": "^5.7.0",
+    "vite": "^6.3.5"
+  }
+}

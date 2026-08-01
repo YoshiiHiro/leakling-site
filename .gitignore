@@ -1,0 +1,7 @@
+node_modules/
+dist/
+release/
+*.exe
+.vscode/
+Popup Pill Design.zip
+Leakling-website-deploy.zip

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leakling</title>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="./desktop.css" />
+  </head>
+  <body>
+    <div class="app panel" id="app">
+      <header class="titlebar">
+        <div class="brand">
+          <strong>Leakling</strong>
+          <span>Desktop</span>
+        </div>
+        <div class="window-actions">
+          <button id="btn-minimize" type="button" title="Minimize">─</button>
+          <button id="btn-close" type="button" title="Close">✕</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="hero">
+          <h1>Tag why you died. Find your leak.</h1>
+          <p id="hero-copy">
+            Review your death-cause habits between queues. Set one focus for the
+            next match.
+          </p>
+          <div class="meta-row">
+            <span class="pill">Valorant · 21640</span>
+            <span class="pill">Overlay · Ctrl+Shift+A</span>
+            <span class="pill" id="mock-pill" hidden>Mock · Ctrl+Shift+D</span>
+          </div>
+        </section>
+
+        <section class="mock-panel" id="mock-panel">
+          <div class="mock-header">
+            <div class="eyebrow">Mock controls</div>
+            <label class="mock-toggle">
+              <input type="checkbox" id="mock-toggle" checked />
+              <span class="toggle-track"><span class="toggle-knob"></span></span>
+              <span class="toggle-label">Mock mode</span>
+            </label>
+          </div>
+          <div class="mock-actions" id="mock-actions">
+            <button id="btn-simulate-death" type="button" class="primary-btn">
+              💀 Simulate death
+            </button>
+            <button id="btn-simulate-tag" type="button" class="secondary-btn" title="Simulate a death and auto-pick a random cause">
+              🏷️ Simulate + tag
+            </button>
+            <button id="btn-end-mock-match" type="button" class="secondary-btn">
+              ⏹ End mock match
+            </button>
+            <button id="btn-reset-data" type="button" class="danger-btn">
+              🗑 Reset all data
+            </button>
+          </div>
+          <div class="mock-feedback" id="mock-feedback">
+            <div class="mock-feedback-overlay" id="mock-feedback-overlay" hidden>
+              <div class="mock-overlay-preview">
+                <div class="mock-bar">
+                  <strong>Why did you die?</strong>
+                  <span class="mock-timer" id="mock-feedback-timer">6</span>
+                </div>
+                <div class="mock-tag-grid" id="mock-feedback-tags"></div>
+              </div>
+            </div>
+            <p class="mock-status" id="mock-status">Ready — click <strong>Simulate death</strong> to test the overlay</p>
+          </div>
+        </section>
+
+        <section class="summary-panel" id="summary-panel" hidden>
+          <div class="eyebrow">Post-match autopsy</div>
+          <p class="summary-headline" id="summary-headline">—</p>
+          <ol class="summary-top" id="summary-top"></ol>
+          <p class="summary-focus" id="summary-focus">—</p>
+          <p class="summary-note">
+            Focus was auto-suggested from this match. Change it below anytime.
+          </p>
+        </section>
+
+        <section class="focus-panel">
+          <div class="eyebrow">Next-match focus</div>
+          <div class="focus-row">
+            <p class="focus-value" id="focus-value">No focus set</p>
+            <label class="focus-label" for="focus-select">Set focus</label>
+            <select id="focus-select">
+              <option value="">— clear —</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="board">
+          <div class="panel-block">
+            <div class="eyebrow">Cause breakdown</div>
+            <div id="cause-breakdown" class="cause-list"></div>
+            <p class="empty-state" id="cause-empty" hidden>
+              Die, tag why, find your leak
+            </p>
+          </div>
+
+          <div class="panel-block">
+            <div class="eyebrow">Recent tags</div>
+            <ul id="recent-list" class="recent-list"></ul>
+            <p class="empty-state" id="recent-empty" hidden>
+              Die, tag why, find your leak
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- Background controller must run first to set up event bus & store -->
+    <script type="module" src="../background/background.js"></script>
+    <!-- Then the desktop UI -->
+    <script type="module" src="./desktop.js"></script>
+  </body>
+</html>

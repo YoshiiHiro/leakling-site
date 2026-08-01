@@ -1,0 +1,44 @@
+LEAKLING — DEMO RESPONSE (plain-text version)
+=============================================
+Use this when a plain-text-only reply is needed (e.g., some forms).
+Replace [PLACEHOLDERS] with your details.
+
+Subject: Re: Leakling — Riot Dev Application (Demo)
+
+
+Hi [NAME],
+
+Thanks for reviewing the application — happy to share the demo.
+
+Leakling is an AI-powered improvement tool for Valorant: it watches your
+own gameplay, detects the moment behind each death, and compares it to how
+the same situation could play out flawlessly — then surfaces the exact
+habit to fix. It is NOT a stat tracker.
+
+HOW TO ACCESS THE DEMO
+1. Open the live site: https://[SITE_URL]
+   - Product overview, privacy policy, and the demo request flow.
+2. Download the desktop app (Windows): https://[DOWNLOAD_URL]
+   - Includes the in-game death overlay and the on-device ONNX flaw model.
+   - Works in Mock mode without a live match, or with your own clips.
+3. Try the flow:
+   - Simulate a death -> the tag overlay appears -> pick the cause
+     -> watch your personal "leak profile" build over a mock match.
+
+WHAT TO LOOK AT
+- In-game death overlay: kill-feed detection with OCR-confirmed nameplates;
+  fires only on your real deaths.
+- AI flaw analysis: on-device model classifies each death clip into
+  actionable flaw types.
+- Leak profile: per-death tagging builds a personal habit profile with a
+  next-match focus.
+- Privacy-first: everything runs locally. No cloud upload, no recording,
+  data never leaves the device.
+
+Happy to walk you through it live or answer any questions.
+
+Best,
+[YOUR NAME] · [CONTACT_EMAIL]
+
+---
+Leakling — AI improvement tool · Not affiliated with Riot Games

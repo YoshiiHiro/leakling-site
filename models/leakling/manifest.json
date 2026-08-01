@@ -1,0 +1,46 @@
+{
+  "model_name": "Leakling Flaw Detector",
+  "version": "0.1.0",
+  "exported_at": "2026-08-01T20:21:48.554950",
+  "source_checkpoint": "best_model.pt",
+  "training_epoch": 7,
+  "metrics": {
+    "val_accuracy": 0.2381,
+    "val_loss": 1.3567
+  },
+  "input": {
+    "format": "clip",
+    "num_frames": 8,
+    "channels": 3,
+    "height": 224,
+    "width": 224,
+    "normalization": {
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  },
+  "outputs": [
+    "flaw_type_logits",
+    "flaw_type_probs",
+    "severity",
+    "top_flaw_prob",
+    "top_flaw_index",
+    "embedding"
+  ],
+  "flaw_type_count": 31,
+  "deployment": {
+    "runtime": "ONNX Runtime (onnxruntime-node or onnxruntime.dll)",
+    "requires_python": false,
+    "platforms": [
+      "Windows 10/11 x64"
+    ]
+  }
+}

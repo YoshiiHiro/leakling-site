@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leakling Overlay</title>
+    <link rel="stylesheet" href="./in-game.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" hidden>
+      <!-- Popup Pill (new design) -->
+      <div id="pill">
+        <!-- Pulse dot -->
+        <span class="pulse-dot" aria-hidden="true">
+          <span class="pulse-ring"></span>
+          <span class="pulse-core"></span>
+        </span>
+
+        <!-- Cause label -->
+        <span id="cause-label">Crosshair</span>
+
+        <!-- Countdown -->
+        <span class="timer-pill" id="timer-pill">6s</span>
+
+        <!-- Dismiss -->
+        <button id="dismiss-btn" class="dismiss-btn" aria-label="Dismiss">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M2 2L8 8M8 2L2 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <!-- Countdown progress -->
+        <div id="progress-track" aria-hidden="true"><div id="progress-fill"></div></div>
+      </div>
+    </div>
+
+    <script type="module" src="./in-game.js"></script>
+  </body>
+</html>
