@@ -214,7 +214,12 @@
             your own recorded clips.
           </p>
           <div class="demo-download">
-            <a class="btn btn-primary" href="https://github.com/YoshiiHiro/leakling-site/releases/tag/0.1.1">
+            <label class="consent" for="download-consent">
+              <input type="checkbox" id="download-consent" />
+              <span class="consent-circle" aria-hidden="true"></span>
+              <span class="consent-text">I agree to the <a href="TERMS-AND-PRIVACY.md" target="_blank" rel="noopener">Terms of Service &amp; Privacy Policy</a></span>
+            </label>
+            <a class="btn btn-primary" id="download-btn" href="https://github.com/YoshiiHiro/leakling-site/releases/tag/0.1.1" aria-disabled="true">
               ⬇ Download installer (.msi)
             </a>
             <p class="demo-note">Windows 10/11 · ~211 MB · Runs fully offline — no account, no cloud</p>

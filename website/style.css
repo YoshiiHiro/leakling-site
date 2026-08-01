@@ -585,6 +585,61 @@ img {
   line-height: 1.5;
 }
 
+/* Consent check circle — gates the download button */
+.demo-download .consent {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #9ca3af;
+  user-select: none;
+}
+.demo-download .consent input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.consent-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s, background 0.2s;
+}
+.consent input:checked + .consent-circle {
+  border-color: #a78bfa;
+  background: rgba(167, 139, 250, 0.15);
+}
+.consent input:checked + .consent-circle::after {
+  content: '';
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #a78bfa;
+  border-bottom: 2px solid #a78bfa;
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+.consent-text a {
+  color: #a78bfa;
+  text-decoration: underline;
+}
+
+/* Dimmed (disabled) download button */
+.demo-download .btn.dimmed {
+  opacity: 0.4;
+  filter: grayscale(0.6);
+  box-shadow: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none !important;
+}
+
 .cta-embed {
   overflow: hidden;
   border-radius: 12px;

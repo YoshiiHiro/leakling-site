@@ -36,3 +36,21 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
+
+// ===== Download consent — gate the installer button =====
+const consent = document.getElementById('download-consent');
+const downloadBtn = document.getElementById('download-btn');
+
+if (consent && downloadBtn) {
+  const update = () => {
+    const ok = consent.checked;
+    downloadBtn.classList.toggle('dimmed', !ok);
+    downloadBtn.setAttribute('aria-disabled', String(!ok));
+  };
+  consent.addEventListener('change', update);
+  // Belt-and-suspenders: block navigation if unchecked (covers keyboard/screen readers)
+  downloadBtn.addEventListener('click', (e) => {
+    if (!consent.checked) e.preventDefault();
+  });
+  update();
+}
