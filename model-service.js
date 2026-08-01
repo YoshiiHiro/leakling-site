@@ -20,9 +20,15 @@
  */
 const path = require('path');
 const fs = require('fs');
+const { app } = require('electron');
 const { Tensor, InferenceSession } = require('onnxruntime-node');
 
-const MODELS_DIR = path.join(__dirname, 'models', 'leakling');
+// onnxruntime is a native module and cannot read paths inside the asar archive.
+// In packaged builds the model is unpacked to app.asar.unpacked (see asarUnpack
+// in package.json); in dev it lives in the repo. Resolve the real path either way.
+const MODELS_DIR = app.isPackaged
+  ? path.join(process.resourcesPath, 'app.asar.unpacked', 'models', 'leakling')
+  : path.join(__dirname, 'models', 'leakling');
 const MODEL_PATH = path.join(MODELS_DIR, 'model.onnx');
 const MANIFEST_PATH = path.join(MODELS_DIR, 'manifest.json');
 const FLAW_TYPES_PATH = path.join(MODELS_DIR, 'flaw_types.json');
