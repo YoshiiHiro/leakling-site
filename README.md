@@ -15,7 +15,7 @@ Built with **Electron + React + Vite + Tailwind CSS**. Desktop UI designed in Fi
 A ~10-minute review path — **no live Valorant match required**.
 
 1. **📦 Install & launch**
-   Download the **MSI installer** or **portable EXE** from the [Releases page](https://github.com/YoshiiHiro/leakling-site/releases) — **no Node.js needed**. Run it; the desktop window opens automatically.
+   Download the **MSI installer** or **portable EXE** from the [Releases page](https://github.com/YoshiiHiro/leakling-app/releases) — **no Node.js needed**. Run it; the desktop window opens automatically.
 
 2. **🎭 Mock mode** — the full flow without a game
    - Open the **Mock** tab → toggle **Mock mode** on
@@ -37,7 +37,7 @@ A ~10-minute review path — **no live Valorant match required**.
 
 ## ⬇️ End users — no Node.js needed
 
-If you're here to **try the demo**, you don't need Node.js or the source code. Just download the **MSI installer** or **portable EXE** from the [Releases page](https://github.com/YoshiiHiro/leakling-site/releases) and run it. The rest of this README's "Quick start" is only for developers building from source.
+If you're here to **try the demo**, you don't need Node.js or the source code. Just download the **MSI installer** or **portable EXE** from the [Releases page](https://github.com/YoshiiHiro/leakling-app/releases) and run it. The rest of this README's "Quick start" is only for developers building from source.
 
 ## Developer quick start (build from source)
 
