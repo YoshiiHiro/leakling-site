@@ -5,7 +5,7 @@ A Valorant death-reason overlay. Tag why you died and build a personal leak prof
 Built with **Electron + React + Vite + Tailwind CSS**. Desktop UI designed in Figma.
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Leakling-0.1.1-a78bfa?style=for-the-badge" alt="Leakling 0.1.1" />
+  <img src="https://img.shields.io/badge/Leakling-0.2.0-a78bfa?style=for-the-badge" alt="Leakling 0.2.0" />
   <img src="https://img.shields.io/badge/Valorant-AI%20Improvement%20Tool-7c3aed?style=for-the-badge" alt="Valorant AI Improvement Tool" />
   <img src="https://img.shields.io/badge/demo-ready-7fd962?style=for-the-badge" alt="Demo ready" />
 </div>

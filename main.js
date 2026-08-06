@@ -94,12 +94,13 @@ process.on('unhandledRejection', (reason, promise) => {
 
 function createDesktopWindow() {
   desktopWindow = new BrowserWindow({
-    width: 1000,
-    height: 736,
-    minWidth: 720,
-    minHeight: 480,
+    width: 1058,
+    height: 639,
     icon: loadAppIcon(32),
     frame: false,
+    resizable: false,
+    maximizable: false,
+    fullscreenable: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -130,8 +131,8 @@ function createDesktopWindow() {
 
 function createOverlayWindow() {
   overlayWindow = new BrowserWindow({
-    width: 240,
-    height: 56,
+    width: 320,
+    height: 80,
     x: 40,
     y: 120,
     transparent: true,
@@ -276,7 +277,7 @@ ipcMain.handle('overlay:show', (_, opts = {}) => {
   if (!overlayWindow) return;
 
   const { width: screenW, height: screenH } = require('electron').screen.getPrimaryDisplay().workAreaSize;
-  const ow = 240, oh = 56;
+  const ow = 320, oh = 80;
 
   // Calculate position
   const pos = (opts.position || 'top_right').toLowerCase().replace(' ', '_');
@@ -305,7 +306,7 @@ ipcMain.handle('overlay:hide', () => {
 ipcMain.handle('overlay:setPosition', (_, pos) => {
   if (!overlayWindow || overlayWindow.isDestroyed()) return;
   const { width: screenW, height: screenH } = require('electron').screen.getPrimaryDisplay().workAreaSize;
-  const ow = 240, oh = 56;
+  const ow = 320, oh = 80;
   const p = (pos || 'top_right').toLowerCase().replace(' ', '_');
   let x = 40, y = 120;
   if (p === 'top_left') { x = 20; y = 20; }

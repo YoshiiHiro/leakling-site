@@ -353,7 +353,7 @@ export class DeathDetector {
   /** Get the latest frame for external AI processing — returns null if not snapping */
   get latestFrame() { return this._latestFrame; }
 
-  /** Start the snapshot loop — defaults to 60fps, slows to idle if Valorant isn't detected */
+  /** Start the snapshot loop — 60fps only when a live source is detected. */
   startSnapping(forceHighPerf = false) {
     if (this._snapTimer || this._snapActive) return;
     this._snapActive = true;
@@ -361,8 +361,10 @@ export class DeathDetector {
     this._frameCount = 0;
     this._startTime = performance.now();
     this._captureStats = { captured: 0, dropped: 0 };
-    // Determine interval: 60fps only if Valorant is running or forceHighPerf
-    const useHighPerf = forceHighPerf || this._valorantWasOpen;
+    // 60fps only if Valorant is running, a window source (Valorant/video) was
+    // detected, or high-perf was explicitly requested. Otherwise idle at 1fps
+    // so the app stays responsive when nothing is on screen.
+    const useHighPerf = forceHighPerf || this._valorantWasOpen || this._captureMode === 'window';
     const interval = useHighPerf ? 16 : 1000;
     // Take first snap immediately
     this._takeSnap();
@@ -422,33 +424,32 @@ export class DeathDetector {
         takenAt: Date.now(),
       };
 
-      // Auto-analyze this new snapshot
-      this._analyzeImage(result.dataUrl, this._snapCanvas, this._snapCtx).then((detection) => {
+      // Auto-analyze this new snapshot. `_snapBusy` stays true until this
+      // finishes so analyses never overlap and saturate the main thread.
+      const detection = await this._analyzeImage(result.dataUrl, this._snapCanvas, this._snapCtx);
 
-        this._lastResult = detection;
-        this._state = detection.state;
+      this._lastResult = detection;
+      this._state = detection.state;
 
-        this._history.push(detection);
-        if (this._history.length > 8) this._history.shift();
+      this._history.push(detection);
+      if (this._history.length > 8) this._history.shift();
 
-        if (detection.state === 'death_confirmed') {
-          this._consecutiveDeaths++;
-          this._consecutiveSpectates = 0;
-          this._consecutiveKills = 0;
-          if (this._consecutiveDeaths >= 2 && this._onAutoDetect) {
-            this._onAutoDetect(detection);
-          }
-        } else {
-          this._consecutiveDeaths = 0;
+      if (detection.state === 'death_confirmed') {
+        this._consecutiveDeaths++;
+        this._consecutiveSpectates = 0;
+        this._consecutiveKills = 0;
+        if (this._consecutiveDeaths >= 2 && this._onAutoDetect) {
+          this._onAutoDetect(detection);
         }
+      } else {
+        this._consecutiveDeaths = 0;
+      }
 
-        this._onResult?.(detection);
-      });
-
-      this._snapBusy = false;
+      this._onResult?.(detection);
     } catch {
-      this._snapBusy = false;
+      // ignore
     }
+    this._snapBusy = false;
   }
 
   /** Analyze the latest snapshot for kill feed colors */

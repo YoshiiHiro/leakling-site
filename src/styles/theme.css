@@ -199,3 +199,14 @@
 .leakling-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(157, 78, 221, 0.6);
 }
+
+/* Monochrome theme scrollbar overrides */
+[data-theme="monochrome"] .leakling-scroll {
+  scrollbar-color: rgba(160, 160, 160, 0.35) rgba(11, 11, 13, 0.6);
+}
+[data-theme="monochrome"] .leakling-scroll::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.35);
+}
+[data-theme="monochrome"] .leakling-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.6);
+}

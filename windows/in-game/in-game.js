@@ -3,14 +3,11 @@ import { OVERLAY_VISIBLE_MS } from '../../scripts/constants.js';
 const app = document.getElementById('app');
 const pill = document.getElementById('pill');
 const causeLabel = document.getElementById('cause-label');
-const timerPill = document.getElementById('timer-pill');
-const progressFill = document.getElementById('progress-fill');
 const dismissBtn = document.getElementById('dismiss-btn');
 
 let activeDeath = null;
 let hideTimer = null;
 let countdownTimer = null;
-let progressTimer = null;
 let secondsLeft = 0;
 let isExiting = false;
 
@@ -31,7 +28,6 @@ function hideWindow() {
 function clearTimers() {
   if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
   if (countdownTimer) { clearInterval(countdownTimer); countdownTimer = null; }
-  if (progressTimer) { clearInterval(progressTimer); progressTimer = null; }
 }
 
 function setUiVisible(visible) {
@@ -75,42 +71,9 @@ function startSession(death) {
   causeLabel.textContent = labelMap[causeId] || 'Unknown';
 
   secondsLeft = Math.ceil(OVERLAY_VISIBLE_MS / 1000);
-  timerPill.textContent = secondsLeft + 's';
-  timerPill.classList.remove('warning');
-  progressFill.style.width = '100%';
-  progressFill.classList.remove('warning');
   pill.style.animation = 'popIn 0.32s cubic-bezier(0,0,0.2,1) forwards';
 
   setUiVisible(true);
-
-
-  // Countdown timer
-  countdownTimer = setInterval(() => {
-    secondsLeft -= 1;
-    timerPill.textContent = Math.max(0, secondsLeft) + 's';
-    if (secondsLeft <= 2) {
-      timerPill.classList.add('warning');
-      progressFill.classList.add('warning');
-    }
-    if (secondsLeft <= 0 && countdownTimer) {
-      clearInterval(countdownTimer);
-      countdownTimer = null;
-    }
-  }, 1000);
-
-  // Progress bar
-  const totalMs = OVERLAY_VISIBLE_MS;
-  const stepMs = 50;
-  let elapsed = 0;
-  progressTimer = setInterval(() => {
-    elapsed += stepMs;
-    const pct = Math.max(0, 100 - (elapsed / totalMs) * 100);
-    progressFill.style.width = pct + '%';
-    if (elapsed >= totalMs && progressTimer) {
-      clearInterval(progressTimer);
-      progressTimer = null;
-    }
-  }, stepMs);
 
   // Auto-dismiss
   hideTimer = setTimeout(() => {

@@ -3,10 +3,15 @@ const STORAGE_KEY = 'leakling_settings_v1';
 const DEFAULTS = {
   overlayOn: true,
   overlayPosition: 'Top right',
+  overlayOpacity: 75,
   toggleHotkey: 'Ctrl+Shift+A',
   tagHotkey: 'Ctrl+Shift+D',
   mockOn: false,
   playerName: '',
+  autoStart: false,
+  theme: 'default',
+  snapOn: false,
+  detectionMode: 'Auto',
 };
 
 export class SettingsService {

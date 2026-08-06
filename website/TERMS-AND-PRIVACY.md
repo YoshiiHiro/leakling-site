@@ -1,6 +1,6 @@
 # Leakling — Terms of Service & Privacy Policy
 
-*Version 0.1.1 · Last updated 2026-08-02*
+*Version 0.2.0 · Last updated 2026-08-06*
 
 ## 1. Overview
 
